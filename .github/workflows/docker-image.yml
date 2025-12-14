@@ -27,4 +27,4 @@ jobs:
           context: ./
           platforms: linux/amd64
           push: true
-          tags: shiguang2/course:latest
+          tags: shiguang2/xianbao:latest
