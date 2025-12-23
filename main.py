@@ -31,11 +31,10 @@ def push_task():
         "User-Agent": ua.random
     }
     url = "https://new.xianbao.fun/plus/json/push.json"
-    try:
-        while True:
+    while True:
+        try:
             time.sleep(180)
             r = requests.get(url, headers=headers, timeout=10)
-            print(r.text)
             if r.status_code != 200:
                 continue
             news_list = r.json()
@@ -70,8 +69,8 @@ def push_task():
                             json=msg,
                             timeout=10
                         )
-    except Exception as e:
-        print(e)
+        except Exception as e:
+            print(e)
 
 
 def index():
