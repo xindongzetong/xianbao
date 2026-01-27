@@ -33,7 +33,7 @@ def push_task():
     url = "https://new.xianbao.fun/plus/json/push.json"
     while True:
         try:
-            time.sleep(180)
+            time.sleep(5)
             r = requests.get(url, headers=headers, timeout=10)
             if r.status_code != 200:
                 continue
